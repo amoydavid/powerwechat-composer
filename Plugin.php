@@ -66,7 +66,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         }
         $vendorPath = rtrim($event->getComposer()->getConfig()->get('vendor-dir'), '/');
         $manifest = new ManifestManager(
-            $vendorPath, $vendorPath.'/powerwechat-composer/powerwechat-composer/extensions.php'
+            $vendorPath, $vendorPath.'/amoydavid/powerwechat-composer/extensions.php'
         );
 
         $manifest->unlink()->build();
