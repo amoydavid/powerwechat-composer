@@ -1,0 +1,31 @@
+{
+    "name": "amoydavid/powerwechat-composer",
+    "description": "The composer plugin for PowerWeChat",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "amoydavid",
+            "email": "liuw@liuw.net"
+        },
+        {
+            "name": "MINGYOUNG",
+            "email": "mingyoungcheung@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "composer-plugin-api": "^1.0"
+    },
+    "require-dev": {
+        "composer/composer": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PowerWeChatComposer\\": ""
+        }
+    },
+    "extra": {
+        "class": "PowerWeChatComposer\\Plugin"
+    }
+}
