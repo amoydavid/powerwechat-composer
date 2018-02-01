@@ -32,3 +32,5 @@ Specify server observer classes in the extra section:
 }
 ```
 
+
+Thanks to easywechat-composer.
