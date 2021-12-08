@@ -79,12 +79,14 @@ class ManifestManager
     {
         $manifest = [];
 
-        foreach ($packages as $package) {
-            if (self::PACKAGE_TYPE === $package['type']) {
-                $manifest[$package['name']] = [
-                    self::EXTRA_OBSERVER => $package['extra'][self::EXTRA_OBSERVER] ?? [],
-                ];
+        $packages = array_filter($packages, function ($package) {
+            if(isset($package['type'])){
+                return $package['type'] === self::PACKAGE_TYPE;
             }
+        });
+
+        foreach ($packages as $package) {
+            $manifest[$package['name']] = [self::EXTRA_OBSERVER => $package['extra'][self::EXTRA_OBSERVER] ?? []];
         }
 
         return $manifest;
